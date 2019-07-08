@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link href="./assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./assets/favicon.ico" rel="icon">
+
+ 
+
+  <title> AMLO Makes a Move </title>  
+
+<link href="C:/Users/ldsan/Desktop/proyect 2/main.a3f694c0.css" rel="stylesheet">
+
+<meta charset="utf-8">
+ <title>Geo JSON</title>
+
+ <!-- Leaflet CSS & JS -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+ integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+ crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+ integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+ crossorigin=""></script>
+
+ <!--D3 cdn-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+
+ <!-- Our CSS -->
+ <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+
+ <!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html" title="">
+          <img src="./assets/images/mashuptemplate.svg" class="navbar-logo-img" alt="">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./index.html" title="" class="active">Home</a></li>
+          <li><a href="./about.html" title=""> About</a></li>
+          <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Economic Data</a>
+                            <div class="dropdown-menu">
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/Desempleo.html" class="dropdown-item">Desempleo</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/inflacion.html" class="dropdown-item">Inflación</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/empleos creados.html" class="dropdown-item">Empleos Creados</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/actividad turistica.html" class="dropdown-item">Actividad Turistica</a><br>
+                            </div>
+                        </li>
+          <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Violence</a>
+                            <div class="dropdown-menu">
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/homicidios.html" class="dropdown-item">Homicidio</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/robo habitacion.html" class="dropdown-item">Robo Habitación</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/robo vehiculo.html" class="dropdown-item">Robo Vehículo</a><br>
+                                <a href="C:/Users/ldsan/Desktop/proyect 2/robo transporte publico.html" class="dropdown-item">Robo Transporte Público</a><br>
+                            </div>
+                        </li>
+          <!-- <li><a href="./components.html" title="">Components</a></li> -->
+          <li>
+            <p>
+              <a href="./download.html" class="btn btn-primary navbar-btn" title="">Download</a>
+            </p>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+<div class="white-text-container background-image-container" style="background-image: url('C:/Users/ldsan/Desktop/proyect 2/PORTADA.jpg')">
+    <div class="opacity"></div>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-6">
+                <h1>CHAIROS VS FIFÍS</h1>
+                
+                <p>Everyone likes to talk about politics, some share anecdotes, some share youtube videos and a few are know it alls. One thing is for sure, we live in an era
+                    of fake news. This is our take on the situation, backed by the data available for the past few months.  </p>
+                 <a href="C:/Users/anton/Resources/Homeworks/June/HW d3/data.csv" title="" class="btn btn-lg btn-primary">Download</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section-container border-section-container">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-container-spacer">
+                    <div class="text-center">
+                        <h2>Our two main points</h2>
+                        <p> We used the available datasets, extracting two main macroeconomic indicator for each president to plot a comparisson for the same month for a different year. </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="fa-container">
+                        <i class="fa fa-money fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3>Economic data</h3>
+                    </div>
+                    <div>
+                        <p>Should we be worried and move to another country? We utilized several economic indicators including GDP, unemployment rates
+                            and others.  </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fa-container">
+                        <i class="fa fa-bomb fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3>Violence and Assaults</h3>
+                    </div>
+                    <div>
+                        <p>Has there been a noticeable change in the number of assaults and violence? We dove into the data, analyzing 
+                            assaults, kidnapping, rape, drug-trafficking and other variables. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="img-responsive" src="C:/Users/ldsan/Desktop/proyect 2/alejandro4.jpg" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="C:/Users/ldsan/Desktop/proyect 2/FONDO3.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="C:/Users/ldsan/Desktop/proyect 2/FONDO2.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+
+
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="section-container background-color-container white-text-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <h2>Our Data</h2>
+                    <p> Click here to download a PDF </p>
+                    <a href="./download.html" title="" class="btn btn-primary btn-lg">Download</a>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
+
+ <div class="section-container">
+    <div class="container">
+        <div class="row">                   
+            <div class="col-md-7">
+                <img class="img-responsive" src="C:/Users/ldsan/Desktop/proyect 2/amlotweet.jpg" alt="">
+            </div>
+
+            <div class="col-md-5">
+                <ul class="features">
+                    <li>
+                        <h3>@lopezobrador_</h3>
+                        <p>Iniciamos la visita a unidades médicas y hospitales de las zonas más pobres y marginadas del país. Habrá suficientes... 
+                        </p>
+                    </li>
+                    <li>
+                        <h3>@lopezobrador_</h3>
+                        <p>Tenemos que proteger a los ciudadanos y hacer valer los derechos humanos fundamentales. Conferencia de prensa en vivo.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>@lopezobrador_ </h3>
+                        <p>Lo prioritario es la seguridad pública, proteger al ciudadano. Para eso será la Guardia Nacional. Conferencia de prensa.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        
+
+              
+            <div class="row">
+                <div class="col-md-4">
+                        <img class="img-responsive page-base-image" src="C:/Users/ldsan/Desktop/proyect 2/logo2.jpg" alt="">
+
+                </div>
+                <div class="col-md-4">
+                        <img class="img-responsive page-base-image" src="C:/Users/ldsan/Desktop/proyect 2/logo.png" alt="">
+                </div>
+                <div class="col-md-4">
+                        <img class="img-responsive page-base-image" src="C:/Users/ldsan/Desktop/proyect 2/logo3.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer>
+        <div class="section-container footer-container">
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-4">
+                            <h4>About us</h4>
+                            <p>We are Pythones, a group dedicated to data analytics at its best </p>
+                        </div>
+    
+                        <div class="col-md-4">
+                            <h4>Want to vent? Click on our social networking sites</h4>
+                            <p>
+                                <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                              </a>
+                            </p>
+                            <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" class="link-like-text" title="Create website with free html template">Mashup Template</a>/<a href="http://www.unsplash.com/" class="link-like-text" title="Beautiful Free Images">Unsplash</a></small></p>    
+                        </div>
+    
+                        <div class="col-md-4">
+                            <h4>Our Newsletter</h4>
+                            
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control footer-input-text">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+-->
+
+<script type="text/javascript" src="./main.41beeca9.js"></script>
+
+<!-- The div where we will inject our map -->
+ <div id="map"></div>
+ <script type="text/javascript" src="static/js/mexican_states_pretty.json"></script>
+ <!-- API key -->
+ <script type="text/javascript" src="static/js/config.js"></script>
+ <!-- Our JS -->
+ <script type="text/javascript" src="static/js/roboHabitacion.js"></script>
+ <script type="text/javascript" src="static/js/logic.js"></script>
+
+ <span>{{peje_tweet}}</span>
+
+</body>
+
+</html>
